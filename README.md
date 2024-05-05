@@ -164,7 +164,6 @@ Consistency checking can be effective by viewing the different layers. If a toke
 </tbody>
 </table>
 
-
 Interestingly the model seems to improve slightly from Layer 8 to Layer 16, but then regess a bit in Layer 24.  At the top layer, 32,  it performs the best across all metrics.  BERTScore shows the least amount ofchange from layer to layer, probably because it is a more robust to words that are similar.  Rouge and CodeBLEU followed a pattern that I mentioned above more decidedly.  At the final layer, CodeBLEU score was more than double the score of any of the other layers.
 
 ## Special Thanks
