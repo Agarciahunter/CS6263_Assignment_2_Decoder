@@ -21,12 +21,14 @@ After that use:
 ## NOTE
 The code was done using python 3.10 and code pytorch 12.1. If you want to use a differnet version of pytorch or cuda I recommond making a new a enviorment using this directory https://github.com/unslothai/unsloth. If you experience errors with installing the xformers I also suggest using that site to intsall unsloth.
 
-If you have any other problems I suggest this looking at this issue thread as I was able to generally able to find solutions from them https://github.com/unslothai/unsloth/issues/221.
+If you have any other problems I suggest that you look at this issue thread as I was able to find most solutions to my errors from them: https://github.com/unslothai/unsloth/issues/221.
 
+The python version can be very finicky when it comes to unsloth so I don’t recommend changing it.
 
 ### Execution
-Once it's all set up run the code with `llamaTrain.py`
+Once it's all set up run the code with:
 
+`llamaTrain.py`
 
 Afterwards you can use this code to find the infersnces for the various layer outputs on the model (before running I suggest checking this file to make sure that any unwanted hparams have been cut):
 
@@ -49,18 +51,10 @@ Afterwards you can use this code to find the infersnces for the various layer ou
 ![token_probability_layer_32](https://github.com/Agarciahunter/CS6263_Assignment_2_Decoder/blob/main/token_probability_layer_32.png)
 
 **2)	If you recall the paper we reviews on consistency checking used several models, do you think we can use consistency check method between these layers for factuality analysis? Present your approach and results including discussion.**
-Consistency checking can be effective by viewing the different layers. If a token shows consitent high probability in all observered layers, it can be expected that the given token is not being hallucinated. The token surviving a lot of layers, means that the model always had high confidence in it.
+Consistency checking can be effective by viewing the different layers. It stands to reason that, if a token shows consistent high probability in all observed layers, it can be expected that the given token is not being hallucinated. The token surviving a lot of layers, means that the model always had high confidence in it.
 
 **3)	Write another discussion explaining the how the layers effect on the different metrics on your trained model from assignment 1.c.**
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
-</style>
 <table class="tg">
 <thead>
   <tr>
@@ -164,13 +158,11 @@ Consistency checking can be effective by viewing the different layers. If a toke
 </tbody>
 </table>
 
-Interestingly the model seems to improve slightly from Layer 8 to Layer 16, but then regess a bit in Layer 24.  At the top layer, 32,  it performs the best across all metrics.  BERTScore shows the least amount ofchange from layer to layer, probably because it is a more robust to words that are similar.  Rouge and CodeBLEU followed a pattern that I mentioned above more decidedly.  At the final layer, CodeBLEU score was more than double the score of any of the other layers.
+An improvement, albeit a small one, can be seen from Layer 8 to Layer 16, however it then proceeds to regress a bit in Layer 24. However, once it reaches layer 32, it performs the best across all metrics.  BERT Score experiences the least amount of change as it goes from layer to layer, which is likely due to it being more robust when it comes to words that are similar. Rouge and CodeBLEU followed the pattern of increase-decrease-increase that was mentioned. CodeBLEU was the most affected by the layers as the layer 32 score was more than double the layer 8 score.
 
 ## Special Thanks
 DOLA: https://github.com/voidism/DoLa
 
 DOLA Transformers: https://github.com/voidism/transformers-dola/
-# CS6263_Assignment_2_Decoder
-# CS6263_Assignment_2_Decoder
-# CS6263_Assignment_2_Decoder
-# CS6263_Assignment_2_Decoder
+
+Unsloth AI: https://github.com/unslothai/unsloth
