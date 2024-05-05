@@ -11,7 +11,7 @@ Then use this to activate it:
 
 You may need to install the transformers library manually since a forked version is being used:
 
-`pip uninstall transformers`
+`pip uninstall transformers` <br />
 `pip install -e transformers-dola-main/`
 
 After that use:
