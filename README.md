@@ -18,7 +18,7 @@ After that use:
 
 `pip install -r requirements.txt` or `pip install -r requirements1.txt` if the former doesn't work
 
-## NOTE
+# NOTE
 The code was done using python 3.10 and code pytorch 12.1. If you want to use a differnet version of pytorch or cuda I recommond making a new a enviorment using this directory https://github.com/unslothai/unsloth. If you experience errors with installing the xformers I also suggest using that site to intsall unsloth.
 
 If you have any other problems I suggest that you look at this issue thread as I was able to find most solutions to my errors from them: https://github.com/unslothai/unsloth/issues/221.
